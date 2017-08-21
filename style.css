@@ -1,0 +1,70 @@
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: solid 1px lightgray;
+  }
+
+  input[type=text]:focus {
+  /*  border: solid 1px #1ba2e3;*/
+  }
+
+  label {
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  input[type=checkbox] {
+      width: 30px;
+      height: 20px;
+      zoom: 1.1;
+    }
+
+input[type=checkbox]:checked + label {
+      text-decoration: line-through;
+      color: lightgray;
+}
+
+
+  button {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    color: #fff;
+    background: #1ba2e3;
+    border: none;
+    width: 15%;
+    height: 65%;
+    font-size: 13px;
+    border-radius: 5px;
+  }
+
+  ul#myList {
+    float:left;
+    width: 109%;
+    margin: 0 0 0 -60px;
+    font-size: 14px;
+  }
+
+  ul#myList li {
+    list-style-type: none;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 20px;
+  }
