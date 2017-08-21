@@ -1,8 +1,6 @@
 # to-do-list
 
 Take-Home Exercise: To-do List App
-<<<<<<< HEAD
-=======
 
 1. Populate the to-do list with data fetched from the server
 2. Implement functionality to add a new to-do, which should also save it to the server 
