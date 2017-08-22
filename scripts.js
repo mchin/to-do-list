@@ -2,7 +2,7 @@ $(function() {
 
     $.ajax({
         type: 'GET',
-        url: 'https://quip-todos.herokuapp.com/get_todos?email=example@gmail.com',
+        url: 'https://quip-todos.herokuapp.com/get_todos?email=examplee@gmail.com',
         success: function(data) {
             $.each(data, function(index, item) {
                 $('#myList').append('<li><input type="checkbox"><label>' + data[index].text + '</label></li>');
@@ -19,12 +19,12 @@ $(function() {
         $('#current-text').val('');
 
         var newToDoItem = {
-            email: 'example@gmail.com',
-            text: 'currText',
+            email: 'examplee@gmail.com',
+            text: $currText,
         };
 
         var completed = {
-            email: 'example@gmail.com',
+            email: 'examplee@gmail.com',
             completed: 'true',
         };
 
@@ -32,10 +32,13 @@ $(function() {
         $.ajax({
             method: 'POST',
             url: 'https://quip-todos.herokuapp.com/add_todo',
-            // data: JSON.stringify({email: 'email', text: $('#current-text').val()
-        //  }),
             data: newToDoItem,
             success: function(newToDo) {
+              if(newToDo.success == true){
+                setTimeout(function(){
+                  location.reload();
+                }, 5000);
+              }
             },
             error: function() {
                 console.log('Error saving data');
@@ -51,9 +54,6 @@ $(function() {
             $.ajax({
                 method: 'POST',
                 url: 'https://quip-todos.herokuapp.com/mark_completed',
-                /* data: JSON.stringify({email: 'example', text: $('#current-text').val()
-                }), */
-
                 data: completed,
                 success: function(completed) {
                     console.log(completed);
