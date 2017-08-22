@@ -2,7 +2,7 @@ $(function() {
 
     $.ajax({
         type: 'GET',
-        url: 'https://quip-todos.herokuapp.com/get_todos?email=example@example.com',
+        url: 'https://quip-todos.herokuapp.com/get_todos?email=example@gmail.com',
         success: function(data) {
             $.each(data, function(index, item) {
                 $('#myList').append('<li><input type="checkbox"><label>' + data[index].text + '</label></li>');
@@ -31,7 +31,7 @@ $(function() {
 
         $.ajax({
             method: 'POST',
-            url: 'http://quip-todos.herokuapp.com/add_todo',
+            url: 'https://quip-todos.herokuapp.com/add_todo',
             // data: JSON.stringify({email: 'email', text: $('#current-text').val()
         //  }),
             data: newToDoItem,
@@ -50,7 +50,7 @@ $(function() {
 
             $.ajax({
                 method: 'POST',
-                url: 'http://quip-todos.herokuapp.com/mark_completed',
+                url: 'https://quip-todos.herokuapp.com/mark_completed',
                 /* data: JSON.stringify({email: 'example', text: $('#current-text').val()
                 }), */
 
